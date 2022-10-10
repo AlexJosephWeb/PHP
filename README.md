@@ -92,7 +92,7 @@ $_SERVER["REMOTE_ADDR"];
 
 3. What’s the difference between unset() and unlink()?
 
-_unset() sets a variable to “undefined” while unlink() deletes a file we pass to it from the file system.
+_unset() sets a variable to “undefined” while unlink() deletes a file we pass to it from the file system._
 
 4. What are the main error types in PHP and how do they differ?
 
@@ -108,20 +108,96 @@ _unset() sets a variable to “undefined” while unlink() deletes a file we pas
 Normally GET is used to retrieve data while POST to insert and update.
 
 6. How can you enable error reporting in PHP?
+
+_Check if “display_errors” is equal “on” in the php.ini or declare “ini_set('display_errors', 1)” in your script.
+Then, include “error_reporting(E_ALL)” in your code to display all types of error messages during the script execution._
+
 7. What are Traits?
+
+_Traits are a mechanism that allows you to create reusable code in languages like PHP where multiple inheritance is not supported. A Trait cannot be instantiated on its own._
+
 8. Can the value of a constant change during the script’s execution?
+
+_No, the value of a constant cannot be changed once it’s declared during the PHP execution._
+
 9. Can you extend a Final defined class?
+
+_No, you cannot extend a Final defined class. A Final class or method declaration prevents child class or method overriding._
+
 10. What are the __construct() and __destruct() methods in a PHP class?
+
+_All objects in PHP have Constructor and Destructor methods built-in. The Constructor method is called immediately after a new instance of the class is being created, and it’s used to initialize class properties. The Destructor method takes no parameters. Understanding these two in PHP means that the candidate knows the very basics of OOP in PHP._
+
 11. How we can get the number of elements in an array?
+
+_The count() function is used to return the number of elements in an array._
+
 12. How would you declare a function that receives one parameter name hello?
+
+```
+<?php
+function showMessage($hello=false){
+  echo ($hello)?'hello':'bye';
+}
+?>
+```
+
 13. The value of the variable input is a string 1,2,3,4,5,6,7. How would you get the sum of the integers contained inside input?
+
+```
+<?php
+echo array_sum(explode(',',$input));
+?>
+```
+
 14. Suppose you receive a form submitted by a post to subscribe to a newsletter. This form has only one field, an input text field named email. How would you validate whether the field is empty? Print a message "The email cannot be empty" in this case.
+
+```
+<?php
+if(empty($_POST['email'])){
+  echo "The email cannot be empty";
+}
+?>
+```
+
 15. What does MVC stand for and what does each component do?
+
+_MVC stands for Model View Controller. The controller handles data passed to it by the view and also passes data to the view. It’s responsible for the interpretation of the data sent by the view and dispersing that data to the appropriate models awaiting results to pass back to the view. Very little, if any business logic should be occurring in the controller.
+
+The model’s job is to handle specific tasks related to a specific area of the application or functionality. Models will communicate directly with your database or other storage system and will handle business logic related to the results.
+
+The view is passed data by the controller and is displayed to the user.
+
+Overall, this question is worth knowing as the MVC design pattern has been used a lot in the last few years and is a very good design pattern to know. Even with more advanced flows that go down to repositories and entities, they still are following the same basic idea for the Controller and View.
+
+The Model is typically just split out into multiple components to handle specific tasks related to database data, business logic etc. The MVC design pattern helps draw a better understanding of what is being used, as a whole, in the industry._
+
 16. How does one prevent the following Warning ‘Warning: Cannot modify header information – headers already sent’ and why does it occur in the first place?
+
+_The candidate should not output anything to the browser before using code that modifies the HTTP headers. Once the developer calls echo or any other code that clears the buffer, the developer can no longer set cookies or headers._
+
 17. What are SQL Injections, how do you prevent them and what are the best practices?
+
+_SQL injections are a method to alter a query in a SQL statement send to the database server. That modified query then might leak information like username/password combinations and can help the intruder to further compromise the server.
+
+To prevent SQL injections, one should always check & escape all user input. In PHP, this is easily forgotten due to the easy access to $_GET & $_POST, and is often forgotten by inexperienced developers. But there are also many other ways that users can manipulate variables used in a SQL query through cookies or even uploaded files (filenames). The only real protection is to use prepared statements everywhere consistently.
+
+Do not use any of the mysql_* functions which have been deprecated since PHP 5.5 ,but rather use PDO, as it allows you to use other servers than MySQL out of the box. mysqli_* are still an option, but there is no real reason nowadays not to use PDO, ODBC or DBA to get real abstraction. Ideally you want to use Doctrine or Propel to get rid of writing SQL queries all together and use object-relational mapping which binds rows from the database to objects in the application._
+
 18. Why would you use === instead of ==?
+
+_If you would want to check for a certain type, like an integer or boolean, the === will do that exactly like one would expect from a strongly typed language, while == would convert the data temporarily and try to match both operand’s types.
+
+The identity operator (===) also performs better as a result of not having to deal with type conversion. Especially when checking variables for true/false, one should avoid using == as this would also take into account 0/1 or other similar representation._
+
 19. What are PSRs? Choose 1 and briefly describe it.
+
+_PSRs are PHP Standards Recommendations that aim at standardizing common aspects of PHP Development._
+
 20. What PSR Standards do you follow? Why would you follow a PSR standard?
+
+_One should follow a PSR because coding standards often vary between developers and companies. This can cause issues when reviewing or fixing another developer’s code and finding a code structure that is different from yours. A PSR standard can help streamline the expectations of how the code should look, thus cutting down confusion and in some cases, syntax errors._
+
 21. Do you use Composer? If yes, what benefits have you found in it?
 22. What’s the difference between using mysql_ functions and PDO?
 23. Describe how inheritance works with PHP.
