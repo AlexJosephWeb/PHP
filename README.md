@@ -81,10 +81,32 @@ Many sources will recommend that you also “salt” your password before hashin
 ## Interview questions
 
 1. What’s the difference between the include() and require() functions?
+
+_They both include a specific file but on require the process exits with a fatal error if the file can’t be included, while include statement may still pass and jump to the next step in the execution.
+
 2. How can we get the IP address of the client?
+
+```
+$_SERVER["REMOTE_ADDR"];
+```
+
 3. What’s the difference between unset() and unlink()?
+
+_unset() sets a variable to “undefined” while unlink() deletes a file we pass to it from the file system.
+
 4. What are the main error types in PHP and how do they differ?
+
+- Notices – Simple, non-critical errors that are occurred during the script execution. An example of a Notice would be accessing an undefined variable.
+- Warnings – more important errors than Notices, however the scripts continue the execution. An example would be include() a file that does not exist.
+- Fatal – this type of error causes a termination of the script execution when it occurs. An example of a Fatal error would be accessing a property of a non-existent object or require() a non-existent file.
+
 5. What is the difference between GET and POST?
+
+- GET displays the submitted data as part of the URL, during POST this information is not shown as it’s encoded in the request.
+- GET can handle a maximum of 2048 characters, POST has no such restrictions.
+- GET allows only ASCII data, POST has no restrictions, binary data are also allowed.
+Normally GET is used to retrieve data while POST to insert and update.
+
 6. How can you enable error reporting in PHP?
 7. What are Traits?
 8. Can the value of a constant change during the script’s execution?
@@ -113,3 +135,4 @@ Many sources will recommend that you also “salt” your password before hashin
 
 - https://www.php.net/manual/en/
 - https://phpbestpractices.org/
+- https://arc.dev/developer-blog/php-interview-questions/
