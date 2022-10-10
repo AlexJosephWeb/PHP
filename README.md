@@ -82,8 +82,32 @@ Many sources will recommend that you also “salt” your password before hashin
 
 1. What’s the difference between the include() and require() functions?
 2. How can we get the IP address of the client?
-
-
+3. What’s the difference between unset() and unlink()?
+4. What are the main error types in PHP and how do they differ?
+5. What is the difference between GET and POST?
+6. How can you enable error reporting in PHP?
+7. What are Traits?
+8. Can the value of a constant change during the script’s execution?
+9. Can you extend a Final defined class?
+10. What are the __construct() and __destruct() methods in a PHP class?
+11. How we can get the number of elements in an array?
+12. How would you declare a function that receives one parameter name hello?
+13. The value of the variable input is a string 1,2,3,4,5,6,7. How would you get the sum of the integers contained inside input?
+14. Suppose you receive a form submitted by a post to subscribe to a newsletter. This form has only one field, an input text field named email. How would you validate whether the field is empty? Print a message "The email cannot be empty" in this case.
+15. What does MVC stand for and what does each component do?
+16. How does one prevent the following Warning ‘Warning: Cannot modify header information – headers already sent’ and why does it occur in the first place?
+17. What are SQL Injections, how do you prevent them and what are the best practices?
+18. Why would you use === instead of ==?
+19. What are PSRs? Choose 1 and briefly describe it.
+20. What PSR Standards do you follow? Why would you follow a PSR standard?
+21. Do you use Composer? If yes, what benefits have you found in it?
+22. What’s the difference between using mysql_ functions and PDO?
+23. Describe how inheritance works with PHP.
+24. Do you know what the PHP-FIG is? Describe it, describe the PSRs you know.
+25. What classes would you create to build a basic Twitter-style status system with OOP?
+26. What frameworks are you experienced in?
+27. What frameworks do you prefer? Why?
+28. Thoughts/experience with unit testing?
 
 ## References
 
