@@ -78,6 +78,13 @@ password_verify('my super cool password', $hashedPassword); // true
 
 Many sources will recommend that you also “salt” your password before hashing it. That’s a great idea, and password_hash() already salts your password for you. That means that you don’t have to salt it yourself.
 
+## Interview questions
+
+1. What’s the difference between the include() and require() functions?
+2. How can we get the IP address of the client?
+
+
+
 ## References
 
 - https://www.php.net/manual/en/
