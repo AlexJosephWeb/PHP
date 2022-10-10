@@ -31,3 +31,4 @@ Many sources will recommend that you also “salt” your password before hashin
 ## References
 
 - https://www.php.net/manual/en/
+- https://phpbestpractices.org/
