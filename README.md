@@ -82,7 +82,7 @@ Many sources will recommend that you also “salt” your password before hashin
 
 1. What’s the difference between the include() and require() functions?
 
-_They both include a specific file but on require the process exits with a fatal error if the file can’t be included, while include statement may still pass and jump to the next step in the execution.
+_They both include a specific file but on require the process exits with a fatal error if the file can’t be included, while include statement may still pass and jump to the next step in the execution._
 
 2. How can we get the IP address of the client?
 
